@@ -22,7 +22,6 @@ public class DBService {
 // Define a URI value for a document.
         String docId = "/example/text.txt";
 
-
         JacksonDatabindHandle<Person> jsonHandle = new JacksonDatabindHandle<Person>(new Person("Kris", "Bliszczak"));
 
 
