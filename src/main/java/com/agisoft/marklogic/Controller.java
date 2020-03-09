@@ -1,33 +1,34 @@
 package com.agisoft.marklogic;
 
+import com.agisoft.marklogic.graphql.types.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
-import javax.ws.rs.HttpMethod;
 
 @RestController
 @Slf4j
 public class Controller {
 
-    private DBService service;
-    private RestTemplate restTemplate;
-
+    private DBService dbService;
 
     @Autowired
     public Controller(DBService service, RestTemplate restTemplate) {
-        this.service = service;
-        this.restTemplate = restTemplate;
+        this.dbService = service;
     }
 
-    @GetMapping("/zipkin")
-    public String get() {
-        log.info("Hello Sleuth");
-        return service.run();
+    @PostMapping("/persons")
+    public void add(@RequestBody Person person) {
+        dbService.add(person);
     }
+
+    @GetMapping("/persons")
+    public String get() {
+        return dbService.getPerson();
+    }
+
+
 }

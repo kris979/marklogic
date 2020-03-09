@@ -7,6 +7,13 @@ human(id: String!): Human
 droid(id: String!): Droid
 # Find character by id
 character(id: String!): Character
+episodes: [Episode]
+    person: Person
+}
+
+type Person {
+    first:String
+    last:String
 }
 
 # One of the films in the Star Wars Trilogy
