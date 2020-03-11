@@ -1,4 +1,4 @@
-package com.agisoft.marklogic.graphql.types;
+package com.agisoft.marklogic;
 
 public class Person {
 

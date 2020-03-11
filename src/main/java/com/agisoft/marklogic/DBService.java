@@ -1,6 +1,5 @@
 package com.agisoft.marklogic;
 
-import com.agisoft.marklogic.graphql.types.Person;
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.DatabaseClientFactory;
 import com.marklogic.client.document.JSONDocumentManager;
@@ -49,14 +48,23 @@ public class DBService {
         StringHandle value = new StringHandle();
         docMgr.read(docId, value);
 
-        QueryManager queryManager = client.newQueryManager();
-
-        StringQueryDefinition query = queryManager.newStringDefinition();
-        query.setCriteria("Bliszczak");
-
-        queryManager.search(query, value);
+//        QueryManager queryManager = client.newQueryManager();
+//
+//        StringQueryDefinition query = queryManager.newStringDefinition();
+//        query.setCriteria("Bliszczak");
+//
+//        queryManager.search(query, value);
 
         log.info("Retrieved {}", value.get());
+        return value.get();
+    }
+
+    public String search(String what) {
+        StringHandle value = new StringHandle();
+        QueryManager queryManager = client.newQueryManager();
+        StringQueryDefinition query = queryManager.newStringDefinition();
+        query.setCriteria(what);
+        queryManager.search(query, value);
         return value.get();
     }
 }
