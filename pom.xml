@@ -27,18 +27,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-            <version>1.4.200</version>
-        </dependency>
-
         <!-- marklogic -->
         <dependency>
             <groupId>com.marklogic</groupId>
@@ -58,13 +46,6 @@
             <version>2.4.3</version>
         </dependency>
 
-        <!-- graphql -->
-        <dependency>
-            <groupId>io.leangen.graphql</groupId>
-            <artifactId>graphql-spqr-spring-boot-starter</artifactId>
-            <version>0.0.4</version>
-        </dependency>
-
         <!-- devtools-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -73,13 +54,6 @@
         </dependency>
 
         <!-- testing facilities -->
-        <dependency>
-            <groupId>com.graphql-java-kickstart</groupId>
-            <artifactId>graphql-spring-boot-starter-test</artifactId>
-            <version>6.0.0</version>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
