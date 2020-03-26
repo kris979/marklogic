@@ -27,6 +27,18 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+            <version>1.4.200</version>
+        </dependency>
+
         <!-- marklogic -->
         <dependency>
             <groupId>com.marklogic</groupId>
@@ -44,6 +56,13 @@
             <groupId>com.squareup.okio</groupId>
             <artifactId>okio</artifactId>
             <version>2.4.3</version>
+        </dependency>
+
+        <!-- graphql -->
+        <dependency>
+            <groupId>io.leangen.graphql</groupId>
+            <artifactId>graphql-spqr-spring-boot-starter</artifactId>
+            <version>0.0.4</version>
         </dependency>
 
         <!-- devtools-->
