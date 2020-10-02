@@ -1,4 +1,4 @@
-package com.agisoft.marklogic;
+package com.agisoft.marklogic.model;
 
 public class Person {
 

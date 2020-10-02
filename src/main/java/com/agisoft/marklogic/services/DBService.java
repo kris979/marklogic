@@ -1,5 +1,6 @@
-package com.agisoft.marklogic;
+package com.agisoft.marklogic.services;
 
+import com.agisoft.marklogic.model.Person;
 import com.agisoft.marklogic.data.JsonFileCardRepository;
 import com.agisoft.marklogic.model.Card;
 import com.marklogic.client.DatabaseClient;
